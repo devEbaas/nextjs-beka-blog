@@ -4,7 +4,7 @@ interface SkillCardProps {
 };
 export function SkillCard({ title, skills }: SkillCardProps) {
   return (
-    <div className="border-secondary border flex-1 min-w-[33%]">
+    <div className="border-secondary border flex-1 w-full">
       <div className="border-b border-secondary p-2">
         <p className="text-sm font-semibold">{title}</p>
       </div>

@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Header } from "./ui/layout/Header";
 import { firaCode } from "./ui/fonts";
 import "./globals.css";
@@ -18,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className} antialiased overflow-x-hidden`}>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description ?? ''} />
+      </Head>
+      <body className={`${firaCode.className} antialiased overflow-x-hidden sm:items-center sm:flex flex-col`}>
         <Header />
         {children}
       </body>
