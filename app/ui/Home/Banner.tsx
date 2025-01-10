@@ -4,7 +4,7 @@ export function Banner() {
   return (
     <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
       <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-semibold leading-snug lg:text-5xl">
+        <h1 className="text-4xl font-semibold leading-snug text-white lg:text-5xl">
           Soy Eduardo, <span className="text-brand">React developer</span> y{" "}
           <span className="text-brand">React Native developer</span>
         </h1>

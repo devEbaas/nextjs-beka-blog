@@ -18,13 +18,13 @@ export function Header() {
             width={20}
             height={20}
           />
-          <p className="font-semibold text-lg lg:text-2xl">Eduardo</p>
+          <p className="font-semibold text-lg text-white lg:text-2xl">Eduardo</p>
         </div>
         <div
           onClick={() => setIsOpen(true)}
           className={clsx("cursor-pointer", { hidden: isOpen })}
         >
-          <Bars2Icon className="w-6 h-6 lg:w-8 lg:h-8" width={24} height={24} />
+          <Bars2Icon className="w-6 h-6 lg:w-8 lg:h-8 fill-white" width={24} height={24} />
         </div>
       </header>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />

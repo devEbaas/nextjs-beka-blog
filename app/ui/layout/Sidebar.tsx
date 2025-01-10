@@ -34,10 +34,13 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           width={20}
           height={20}
         />
-        <p className="font-semibold text-lg">Eduardo</p>
-      <div onClick={() => setIsOpen(false)} className="w-full flex justify-end">
-        <XMarkIcon className="w-6 h-6" />
-      </div>
+        <p className="font-semibold text-lg text-white">Eduardo</p>
+        <div
+          onClick={() => setIsOpen(false)}
+          className="w-full flex justify-end"
+        >
+          <XMarkIcon className="w-6 h-6" />
+        </div>
       </div>
       <div className="flex flex-col">
         {navigationPages.map((page) => (
@@ -48,11 +51,9 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             onClick={() => setIsOpen(false)}
           >
             <p
-              className={clsx(
-                "text-2xl cursor-pointer hover:text-brand", {
-                "font-semibold text-brand": pathname === page.href
-              }
-              )}
+              className={clsx("text-2xl cursor-pointer hover:text-brand", {
+                "font-semibold text-brand": pathname === page.href,
+              })}
             >
               <span className="text-brand">#</span> {page.name}
             </p>

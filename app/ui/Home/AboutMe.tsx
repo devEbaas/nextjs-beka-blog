@@ -1,14 +1,12 @@
-import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import { SectionTitle } from "../common/SectionTitle";
 
 export function AboutMe() {
   return (
     <div className="flex flex-col mt-8 lg:flex-row lg:gap-44 lg:mt-28">
       <div className="flex flex-col gap-4 flex-1">
-        <h2 className="font-semibold text-2xl lg:text-3xl">
-          <span className="text-brand">#</span>Sobre mi
-        </h2>
-
+        <SectionTitle title="Sobre mí" />
         <p className="text-secondary text-md">!Hola, soy Eduardo¡</p>
         <p className="text-secondary text-md">
           Soy un desarrollador especializado en aplicaciones web y móviles,
@@ -25,17 +23,12 @@ export function AboutMe() {
           creatividad, eficiencia y trabajo en equipo.
         </p>
         <button className="w-32 border border-brand px-2 py-1 flex items-center justify-center gap-2">
-          <p className="text-sm">Leer más</p>
-          <ArrowLongRightIcon className="w-4 h-4" />
+          <p className="text-sm text-white">Leer más</p>
+          <ArrowLongRightIcon className="w-4 h-4" color="#fff" />
         </button>
       </div>
-      <div className="w-1/3 min-w-[340px]">
-        <Image
-          src="/about-me.png"
-          alt="about me image"
-          width={340}
-          height={505}
-        />
+      <div className="w-1/3 hidden min-w-[340px] lg:flex items-center justify-center">
+        <Image src="/skills-image.png" alt="skills" width={300} height={240} />
       </div>
     </div>
   );
